@@ -1,5 +1,5 @@
 ## Foundations of Vector Retrieval
-![vectors.png](vectors.png)
+![vectors.png](images/vectors.png)
 
 Vector retrieval is the process of identifying the top k vectors that are closest to a query vector from a large collection of vectors. This is a significant problem in areas such as search engines, recommender systems, and question answering.
 
@@ -9,7 +9,7 @@ Objects from the real world like documents, images, and videos can be represente
 
 For instance, consider a text document represented as a vector. Each dimension of this vector corresponds to a unique word, with the value in each dimension indicating the frequency of that word's occurrence in the document.
 
-![figure1.png](figure1.png)
+![figure1.png](images/figure1.png)
 
 _Figure 1_
 
@@ -150,7 +150,7 @@ This vector representation of S3 metadata provides a data-centric abstraction th
 
 Here is a diagram showing the flow of classifying S3 data using metadata vectors:
 
-![figure2.png](figure2.png)
+![figure2.png](images/figure2.png)
 
 _figure2_
 
