@@ -1,4 +1,5 @@
 ## Foundations of Vector Retrieval
+![vectors.png](vectors.png)
 
 Vector retrieval is the process of identifying the top k vectors that are closest to a query vector from a large collection of vectors. This is a significant problem in areas such as search engines, recommender systems, and question answering.
 
