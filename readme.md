@@ -126,6 +126,11 @@ The distance Δ(u, v) between metadata vectors u and v captures how related two 
 
 We can train a classifier on top of these metadata vectors to categorize data:
 
+## POC
+ Refer to python notebook demonstrating the POC:
+
+ [classification_s3_metadata.ipynb](classification_s3_metadata.ipynb)
+
 ```
 Input Vector: 
    S3 Metadata Vector x
