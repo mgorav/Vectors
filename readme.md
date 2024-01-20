@@ -9,13 +9,9 @@ Objects from the real world like documents, images, and videos can be represente
 
 For instance, consider a text document represented as a vector. Each dimension of this vector corresponds to a unique word, with the value in each dimension indicating the frequency of that word's occurrence in the document.
 
-```mermaid
-graph TD
-  A[Document Space] --> B[Vector Space]
-  B --> C[Dim 1: Frequency of 'the']
-  B --> D[Dim 2: Frequency of 'hello']
-  B --> E[Dim 3: Frequency of 'world']
-```
+![figure1.png](figure1.png)
+
+_Figure 1_
 
 This form of representation allows us to capture the semantics of the document and facilitates mathematical operations like measuring the distance between two document vectors, which helps quantify their semantic similarity.
 
@@ -154,20 +150,9 @@ This vector representation of S3 metadata provides a data-centric abstraction th
 
 Here is a diagram showing the flow of classifying S3 data using metadata vectors:
 
-```mermaid
-flowchart TD
-  A[S3 Buckets] -->|Extract| B[Metadata]
-  B -->|Vectorize| C[Metadata Vectors]
+![figure2.png](figure2.png)
 
-  C -->|Train| D{Classifier Training}
-
-  D -->|Tag| E[Data]
-
-  E --> F[Sensitive]
-  E --> G[Public]
-  E --> H[Archival]
-
-```
+_figure2_
 
 The process involves:
 

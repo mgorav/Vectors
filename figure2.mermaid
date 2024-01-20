@@ -1,0 +1,11 @@
+flowchart TD
+    A[S3 Buckets] -->|Extract| B[Metadata]
+    B -->|Vectorize| C[Metadata Vectors]
+
+    C -->|Train| D{Classifier Training}
+
+    D -->|Tag| E[Data]
+
+    E --> F[Sensitive]
+    E --> G[Public]
+    E --> H[Archival]
