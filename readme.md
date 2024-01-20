@@ -158,7 +158,7 @@ flowchart TD
   A[S3 Buckets] --> B[Extract Metadata]
   B --> C[Metadata Vectors]
 
-  C --> D{Train Vector Classifier<br/>Function of x predicts <br/> Conditional Probability y given x}
+  C --> D{Train Vector Classifier<br/>Function of x predicts <br/> Conditional Probability y given x     }
 
   D --> E[Tag Data]
 
