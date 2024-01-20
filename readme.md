@@ -155,10 +155,10 @@ Here is a diagram showing the flow of classifying S3 data using metadata vectors
 
 ```mermaid
 flowchart TD
-  A[S3 Buckets] --> B[Extract Metadata]
+  A[S3 <br/> Buckets] --> B[Extract <br/> Metadata]
   B --> C[Metadata Vectors]
 
-  C --> D{Train Vector Classifier<br/>Function of x predicts<br/>Conditional Probability y given x}
+  C --> D{Train Vector <br/> Classifier<br/>Function of <br/> x predicts<br/>Conditional Probability <br/> y given x}
 
   D --> E[Tag Data]
 
