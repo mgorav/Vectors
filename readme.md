@@ -185,6 +185,12 @@ Groupings learned by the classifier over these vectors allows centralized and au
 
 **_Example_**
 
+Vectors are mathematical representations that capture attributes of interest as dimensions. Similarity between vectors can model affinity between real-world entities. We can encode S3 metadata like bucket names, object paths, sizes, timestamps as dimensions of a vector x in R^d. The distance function Δ(u,v) measures closeness between any two metadata vectors u and v.
+
+Smaller Δ(u,v) implies greater similarity. This allows grouping alike S3 objects via metadata vectors, even if the buckets are dispersed or paths randomized. For example, financial reports scattered across S3 with large sizes may form one cluster. Clickstream logs with recent timestamps could be another cluster.
+
+A classifier uses these inherent similarities to generalize labels across unstructured cloud data. Training it to map metadata vectors with tagged examples allows centralized and automated data governance.
+
 **Input**
 
 | Bucket Name | Object Key | Size (GB) | Last Modified |
