@@ -126,10 +126,6 @@ The distance Δ(u, v) between metadata vectors u and v captures how related two 
 
 We can train a classifier on top of these metadata vectors to categorize data:
 
-## POC
- Refer to python notebook demonstrating the POC:
-
- [classification_s3_metadata.ipynb](classification_s3_metadata.ipynb)
 
 ```
 Input Vector: 
@@ -221,3 +217,8 @@ Assigning the highest probability label produces:
 | x3     | Archival        |
 
 The classifier exploits similarities between metadata vectors to generalize labels across unstructured S3 data.
+
+## POC
+Refer to python notebook demonstrating the POC:
+
+[classification_s3_metadata.ipynb](classification_s3_metadata.ipynb)
