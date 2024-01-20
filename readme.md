@@ -155,19 +155,17 @@ This vector representation of S3 metadata provides a data-centric abstraction th
 Here is a diagram showing the flow of classifying S3 data using metadata vectors:
 
 ```mermaid
-flowchart LR
-  A[S3 Buckets] --> B[Extract Metadata]
-  B --> C[Metadata Vectors]
+flowchart TD
+  A[S3 Buckets] -->|Extract| B[Metadata]
+  B -->|Vectorize| C[Metadata Vectors]
 
-  C --> D{Train Vector Classifier\nFunction of x predicts\nConditional Probability y given x}
+  C -->|Train| D{Classifier Training}
 
-  D --> E[Tag Data]
+  D -->|Tag| E[Data]
 
   E --> F[Sensitive]
   E --> G[Public]
   E --> H[Archival]
-
-
 
 ```
 
