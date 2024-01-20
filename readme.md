@@ -11,10 +11,11 @@ For instance, consider a text document represented as a vector. Each dimension o
 
 ```mermaid
 graph LR
-    A[Document Space] --> B[Vector Space]
-    B --> C[Dimension 1: Frequency of the]
-    B --> D[Dimension 2: Frequency of hello]
-    B --> E[Dimension 3: Frequency of world]
+  A[Document Space] --> B[Vector Space]
+  B --> C[Dim 1: Frequency of 'the']
+  B --> D[Dim 2: Frequency of 'hello']
+  B --> E[Dim 3: Frequency of 'world']
+
 ```
 
 This form of representation allows us to capture the semantics of the document and facilitates mathematical operations like measuring the distance between two document vectors, which helps quantify their semantic similarity.
