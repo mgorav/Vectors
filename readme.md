@@ -182,3 +182,44 @@ The process involves:
 The key benefit is that by representing S3 metadata attributes as vectors, we can exploit similarities between data to classify and manage them. The distance Δ(u, v) between vectors u and v indicates their semantic affinity.
 
 Groupings learned by the classifier over these vectors allows centralized and automated data governance on the cloud.
+
+**_Example_**
+
+**Input**
+
+| Bucket Name | Object Key | Size (GB) | Last Modified |
+|-------------|------------|-----------|---------------| 
+| financial-data | reports/2023/january.pdf | 0.2 | 01-31-2023 |
+| weblogs | logs/clickstream/2023/01/30/stream.log | 5 | 01-30-2023 |   
+| archives | documents/contracts/signed/2022/q4reporting.pdf | 1 | 12-31-2022 |
+
+**Vectorized Input**
+
+The metadata above can be vectorized into x1, x2, x3 in R^d.
+Distances between these vectors capture similarities:
+
+```
+Δ(x1, x2) > Δ(x1, x3)  
+```
+
+**Output**
+
+The classifier f(x) outputs probability scores over labels:
+
+| Vector | Sensitive | Public | Archival |
+|--------|-----------|--------|----------|
+| x1     | 0.9       | 0.1    | 0.2      |
+| x2     | 0.1       | 0.8    | 0.3      |
+| x3     | 0.5       | 0.2    | 0.9      |
+
+**Predicted Labels**
+
+Assigning the highest probability label produces:
+
+| Vector | Predicted Label |  
+|--------|-----------------|
+| x1     | Sensitive       |
+| x2     | Public          |
+| x3     | Archival        |
+
+The classifier exploits similarities between metadata vectors to generalize labels across unstructured S3 data.
