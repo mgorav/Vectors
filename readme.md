@@ -10,12 +10,11 @@ Objects from the real world like documents, images, and videos can be represente
 For instance, consider a text document represented as a vector. Each dimension of this vector corresponds to a unique word, with the value in each dimension indicating the frequency of that word's occurrence in the document.
 
 ```mermaid
-graph LR
-  A[DocumentSpace] --> B[VectorSpace]
+graph TD
+  A[Document Space] --> B[Vector Space]
   B --> C[Dim 1: Frequency of 'the']
   B --> D[Dim 2: Frequency of 'hello']
   B --> E[Dim 3: Frequency of 'world']
-
 ```
 
 This form of representation allows us to capture the semantics of the document and facilitates mathematical operations like measuring the distance between two document vectors, which helps quantify their semantic similarity.
