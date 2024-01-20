@@ -10,7 +10,7 @@ Objects from the real world like documents, images, and videos can be represente
 For instance, consider a text document represented as a vector. Each dimension of this vector corresponds to a unique word, with the value in each dimension indicating the frequency of that word's occurrence in the document.
 
 ```mermaid
-graph TD
+graph LR
     A[Document Space] --> B[Vector Space]
     B --> C[Dimension 1: Frequency of the]
     B --> D[Dimension 2: Frequency of hello]
