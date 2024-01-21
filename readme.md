@@ -221,4 +221,4 @@ The classifier exploits similarities between metadata vectors to generalize labe
 ## POC
 Refer to python notebook demonstrating the POC:
 
-[classification_s3_metadata.ipynb](classification_s3_metadata.ipynb)
+[classification_s3_metadata.ipynb](https://colab.research.google.com/github/mgorav/Vectors/blob/main/classification_s3_metadata.ipynb#scrollTo=5da998948b39c7d9)
